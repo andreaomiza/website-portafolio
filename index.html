@@ -10,26 +10,34 @@
   <title>Portafolio de Andrea Reyes</title>
   <link rel="icon" href="./src/assets/images/icon-removebg-preview.png" type="image/x-icon">
   <link rel="stylesheet" href="src/styles/output.css">
-  <script src="./src/scripts/gsap.min.js" defer></script>
   <script src="./src/scripts/index.js" defer></script>
   <script src="./src/scripts/habilidades.js" defer></script>
-  
-</head>
-<body class="text-white font-[satoshi] bg-[#000414] w-full bg-gradient-to-b from-[#000414] to-[#2A4272]">
-  
-  <!-- Header --> 
-  <header class="flex justify-evenly items-center p-4">
-    <!-- Logo -->
-    <img src="./src/assets/images/logo.png" alt="Logo" class="w-40 h-16 md:w-30 md:h-24 object-contain">
+  <script src="./src/scripts/toggle-menu.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!-- Navegación --> 
-    <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
-        <a href="#home" class="hover:text-[#E3FF6A] transition duration-300">Inicio</a>
-        <a href="#about" class="hover:text-[#E3FF6A] transition duration-300">Sobre mi</a>
-        <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300">Habilidades</a>
-        <a href="#projects" class="hover:text-[#E3FF6A] transition duration-300">Proyectos</a>
-        <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300">Contacto</a>
-      </nav>
+</head>
+<body class="text-white font-[satoshi] bg-[#000414] w-full">
+  <!-- Header -->
+<header class="relative flex justify-evenly space-x-4 items-center p-4 bg-gray-900">
+  <!-- Logo -->
+  <img src="./src/assets/images/logo.png" alt="Logo" class="w-40 h-16 md:w-30 md:h-24 object-contain">
+
+  <!-- Menú de Navegación en Escritorio -->
+  <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
+    
+      <a href="#home" class="hover:text-[#E3FF6A] transition duration-300">Inicio</a>
+      <a href="#about" class="hover:text-[#E3FF6A] transition duration-300">Sobre mí</a>
+      <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300">Habilidades</a>
+      <a href="./src/subpaginas/proyectos.html" class="hover:text-[#E3FF6A] transition duration-300">Proyectos</a>
+      <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300">Contacto</a>
+  </nav>
+
+  <!-- Botón Toggle para Móviles -->
+  <button class="text-white md:hidden" id="button_toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </button>
 
     <!-- Botón Contacto -->
     <a href="#contact" class="flex items-center gap-2 px-0.5 py-0.5 border pb-0.5 pe-0.5 pr-0.5 pl-3.5 border-gray-500 rounded-full text-white hover:text-[#E3FF6A] transition">
@@ -38,8 +46,17 @@
         🡥
       </div>
       </a>
-      
-  </header>
+      <!-- Menú Desplegable en Móviles -->
+<nav id="mobileMenu" class="fixed z-50 top-0 left-0 flex justify-center items-center w-64 h-full p-5 min-h-screen backdrop-blur-sm bg-gray-800 md:hidden">
+  <ul class="p-6 space-y-4">
+    <li><a href="#home" class="block hover:text-[#E3FF6A] transition duration-300">Inicio</a></li>
+    <li><a href="#about" class="block hover:text-[#E3FF6A] transition duration-300">Sobre mí</a></li>
+    <li><a href="#skills" class="block hover:text-[#E3FF6A] transition duration-300">Habilidades</a></li>
+    <li><a href="./src/subpaginas/proyectos.html" class="block hover:text-[#E3FF6A] transition duration-300">Proyectos</a></li>
+    <li><a href="#contact" class="block hover:text-[#E3FF6A] transition duration-300">Contacto</a></li>
+  </ul>
+</nav>
+</header>
 
 <!-- Hero -->
 <section class="relative text-center max-w-4xl mx-auto mt-10  min-h-screen" id="home">
@@ -56,17 +73,16 @@
         </div>
 
         <!-- Imagen -->
-        <img src="./src/assets/images/imagen_de_mi_2.png" alt="Imagen de Andrea Reyes" class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border border-2  object-cover mx-auto">
+        <img src="./src/assets/images/imagen_de_mi_2.png" alt="Imagen de Andrea Reyes" class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border-2  object-cover mx-auto">
 
         <!-- Card derecha (My Expertise) -->
-        <div class="md:absolute md:right-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:rotate-6  bg-gray-800 text-white p-4 rounded-lg shadow-lg mt-4 md:mt-0  flex flex-col items-center mt-10">
+        <div class="md:absolute md:right-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:rotate-6  bg-gray-800 text-white p-4 rounded-lg shadow-lg md:mt-0  flex flex-col items-center mt-10">
             <p class="font-semibold">MI EXPERIENCIA</p>
             <p>Backend - 80% (Python)</p><br>
             <p>Frontend - 90% (HTML, CSS, JavaScript)</p><br>
             <p>Mobile Development - 70% (Android Studio)</p><br>
             <p>Data Analysis - 60% (Pandas)</p><br>
         </div>
-    </div>
 
     
     <!-- Botón centrado -->
@@ -85,7 +101,7 @@
   
   <!-- Título -->
   <h2 class="text-[#E3FF6A] text-5xl font-extrabold mb-6 uppercase tracking-wide relative z-10">
-    Who Am I ?
+    SOBRE MI 
   </h2>
 
   <!-- Descripción -->
@@ -119,19 +135,17 @@
 
   <!-- Botón -->
   <button
-  a href="#projects" 
-     class="bg-[#E3FF6A] text-black px-6 py-3 rounded-full shadow-lg border border-gray-950 
-            transition-all duration-300 hover:bg-[#ffcb6a] hover:shadow-xl mt-20 relative z-10" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });"
-            >
-    SHOW MY PROJECTS
-  </a>
-</button>
+  class="bg-[#E3FF6A] text-black px-6 py-3 rounded-full shadow-lg border border-gray-950 
+    transition-all duration-300 hover:bg-[#ffcb6a] hover:shadow-xl mt-20 relative z-10">
+    <a href="#projects" class="text-black">SHOW MY PROJECTS</a>
+  </button>
 </section>
 
 <!-- My Skills -->
+<h2 class="text-4xl font-bold text-center p-10">MIS HABILIDADES</h2>
+<section class=" flex items-center justify-center " id="skills"> 
 
-<section class="w-screen w-full flex items-center justify-center min-h-screen" id="skills">
-  <div class="flex flex-col-reverse w-full mx-4 sm:w-4/5 max-w-3xl p-10 rounded-md shadow-lg gap-2 md:flex-row p-6">
+  <div class="flex flex-col-reverse w-full mx-4 sm:w-4/5 max-w-3xl rounded-md shadow-lg gap-2 md:flex-row p-6">
       
       <!-- GRID DE HABILIDADES (Se llenará dinámicamente) -->
       <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1" role="subjects-container" id="subjects_cards">
@@ -153,14 +167,9 @@
   </div>
 </section>
 
-<!-- Importar el script para cargar las habilidades -->
-<script type="module" src="./src/scripts/habilidades.js"></script>
-
-
-
 <!-- Adicional Skills -->
-<section class="py-5 flex flex-col items-center text-center bg-gray-200 rounded-lg w-full px-6 sm:px-10 md:px-20">
-  <h2 class="text-2xl text-[#1E293B] pb-5">
+<section class="py-5 flex flex-col items-center text-center bg-gradient-to-b from-[#0A0F1D] to-[#111827] rounded-lg w-full px-6 sm:px-10 md:px-20">
+  <h2 class="text-2xl text-[#E3FF6A] pb-5">
    ADDITIONAL SKILLS
   </h2>
 
@@ -175,49 +184,50 @@
   </div>
 </section>
 
+<!--Proyectos Destacados-->
 
-
-<!-- Proyectos Destacados -->
-<section id="projects" class="text-white flex items-center justify-center w-full min-h-screen">
-  <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-10 gap-10">
-    <!-- Texto -->
-    <div class="md:w-1/2 text-center md:text-left space-y-5">
-      <h2 class="text-4xl md:text-5xl leading-tight">
-        SECCIÓN: PROYECTOS <br> ANDREA RODRÍGUEZ REYES
+<section class="py-16 px-8 relative p-10" id="projects">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+    <!-- Texto y Botón -->
+    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight p-10">
+        THE WORKS <br> CLOSEST TO <br> MY HEART
       </h2>
-      <a href="./src/subpaginas/proyectos.html" target="_blank"
-         class="inline-block mt-4 px-8 py-3 bg-[#E3FF6A] text-black rounded-full hover:bg-[#ffcb6a] transition">
-        MOSTRAR MIS PROYECTOS
-      </a>
+      <button class="mt-6 px-6 py-3 bg-[#E3FF6A] text-black font-semibold rounded-full shadow-lg hover:bg-[#d4e65d] transition">
+        SHOW MY PROJECTS
+      </button>
     </div>
 
-    <!-- Galería -->
-    <div class="relative flex flex-col items-center md:w-2/3">
-      <!-- Botones de Navegación -->
-      <button id="prevBtn" class="absolute left-[-40px] bg-[#E3FF6A] text-black p-2 rounded-full hidden md:block">⬅</button>
-      <button id="nextBtn" class="absolute right-[-40px] bg-[#E3FF6A] text-black p-2 rounded-full hidden md:block">➡</button>
-
-      <!-- Contenedor -->
-      <div id="projectsGallery" class="flex gap-10 overflow-x-auto md:overflow-hidden scroll-smooth snap-x w-full">
-        <div class="relative w-[250px] h-[400px] rounded-[40px] overflow-hidden snap-center">
-          <img src="./src/assets/images/JavaBlack.jpg" alt="Proyecto Java" class="w-full h-full object-cover">
-          <p class="absolute bottom-4 text-white bg-black bg-opacity-50 px-5 py-3 text-sm rounded">
-            Proyectos en Java<br> Python <br> WebSite. <span>🡥</span>
+    <!-- Carrusel de Proyectos -->
+    <div class="md:w-1/2 relative overflow-hidden">
+      <div id="project-gallery" class="flex space-x-4 overflow-x-auto scrollbar-hide snap-x scroll-smooth">
+        <!-- Tarjeta 1 -->
+        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[220px] h-[380px] shrink-0">
+          <img src="./src/assets/images/JavaBlack.jpg" alt="Plumbing Company" class="w-full h-full object-cover">
+          <p class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 px-3 py-1 text-sm rounded font-semibold">
+            Plumbing Company
           </p>
         </div>
-        <div class="w-[250px] h-[400px] rounded-[40px] overflow-hidden snap-center">
+        <!-- Tarjeta 2 -->
+        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[180px] h-[350px] shrink-0">
           <img src="./src/assets/images/lenguajes-de-programacion.jpg" alt="Proyecto Python" class="w-full h-full object-cover">
         </div>
-        <div class="w-[250px] h-[400px] rounded-[40px] overflow-hidden snap-center">
+        <!-- Tarjeta 3 -->
+        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[160px] h-[320px] shrink-0">
           <img src="./src/assets/images/consulting-blog-09.webp" alt="Proyecto Web" class="w-full h-full object-cover">
         </div>
       </div>
+
+      <!-- Flechas de Navegación -->
+      <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition">
+        &#9665;
+      </button>
+      <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition">
+        &#9655;
+      </button>
     </div>
   </div>
 </section>
-
-
-
 
 <!--Formulario de Contacto-->
 <section id="contact" class="flex justify-center items-center min-h-screen">
@@ -238,7 +248,7 @@
   </div>
 </section>
 
-
+<!--falta envio de formulario de correo -->
 <footer>
   <footer class="bg-[#0A0F1D] text-white py-8 px-4 md:px-12">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">

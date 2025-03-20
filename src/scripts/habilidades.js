@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const habilidades = [
-      { nombre: "HTML", img: "./src/assets/skils-img/html.png" },
-      { nombre: "CSS", img: "./src/assets/skils-img/css.png" },
-      { nombre: "JavaScript", img: "./src/assets/skils-img/javascript.png" },
-      { nombre: "React", img: "./src/assets/skils-img/react.png" },
-      { nombre: "Next.js", img: "./src/assets/skils-img/next-js.png" },
-      { nombre: "Node.js", img: "./src/assets/skils-img/node-js.png" },
-      { nombre: "Tailwind CSS", img: "./src/assets/skils-img/tailwind-css.png" },
-      { nombre: "MongoDB", img: "./src/assets/skils-img/mongo-db.png" },
+      { nombre: "HTML", nivel: "Intermedio", img: "./src/assets/skils-img/html.png" },
+      { nombre: "CSS", nivel: "Intermedio", img: "./src/assets/skils-img/css.png" },
+      { nombre: "JavaScript", nivel: "Avanzado", img: "./src/assets/skils-img/javascript.png" },
+      { nombre: "React", nivel: "Intermedio", img: "./src/assets/skils-img/react.png" },
+      { nombre: "Next.js", nivel: "Intermedio", img: "./src/assets/skils-img/next-js.png" },
+      { nombre: "Node.js", nivel: "Intermedio", img: "./src/assets/skils-img/node-js.png" },
+      { nombre: "Tailwind CSS", nivel: "Intermedio", img: "./src/assets/skils-img/tailwind-css.png" },
+      { nombre: "MongoDB", nivel: "Intermedio", img: "./src/assets/skils-img/mongo-db.png" },
     ];
   
     const skillsContainer = document.getElementById("subjects_cards");
@@ -34,3 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     console.log("✅ Habilidades cargadas correctamente.");
   });
+
+
+
+
+
