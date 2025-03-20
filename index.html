@@ -1,281 +1,489 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio online de un desarrollador web. Desarrollador front-end Andrea Reyes, creador de sitios webs atractivos, dinámicos e intuitivos.">
-  <meta name="keywords" content="desarrollador web, diseñador, desarrollador front-end">
-  <meta name="author" content="Andrea Reyes">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portafolio online de un desarrollador web. Desarrollador front-end Andrea Reyes, creador de sitios webs atractivos, dinámicos e intuitivos."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador web, diseñador, desarrollador front-end"
+    />
+    <meta name="author" content="Andrea Reyes" />
 
-  <title>Portafolio de Andrea Reyes</title>
-  <link rel="icon" href="./src/assets/images/icon-removebg-preview.png" type="image/x-icon">
-  <link rel="stylesheet" href="src/styles/output.css">
-  <script src="./src/scripts/index.js" defer></script>
-  <script src="./src/scripts/habilidades.js" defer></script>
-  <script src="./src/scripts/toggle-menu.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-</head>
-<body class="text-white font-[satoshi] bg-[#000414] w-full">
-  <!-- Header -->
-<header class="relative flex justify-evenly space-x-4 items-center p-4 bg-gray-900">
-  <!-- Logo -->
-  <img src="./src/assets/images/logo.png" alt="Logo" class="w-40 h-16 md:w-30 md:h-24 object-contain">
-
-  <!-- Menú de Navegación en Escritorio -->
-  <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
-    
-      <a href="#home" class="hover:text-[#E3FF6A] transition duration-300">Inicio</a>
-      <a href="#about" class="hover:text-[#E3FF6A] transition duration-300">Sobre mí</a>
-      <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300">Habilidades</a>
-      <a href="./src/subpaginas/proyectos.html" class="hover:text-[#E3FF6A] transition duration-300">Proyectos</a>
-      <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300">Contacto</a>
-  </nav>
-
-  <!-- Botón Toggle para Móviles -->
-  <button class="text-white md:hidden" id="button_toggle">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-  </button>
-
-    <!-- Botón Contacto -->
-    <a href="#contact" class="flex items-center gap-2 px-0.5 py-0.5 border pb-0.5 pe-0.5 pr-0.5 pl-3.5 border-gray-500 rounded-full text-white hover:text-[#E3FF6A] transition">
-      <span class="uppercase text-sm font-medium">Contact</span>
-      <div class="w-7 h-7 flex items-center justify-center bg-[#E3FF6A] text-gray-900 rounded-full transition">
-        🡥
-      </div>
-      </a>
-      <!-- Menú Desplegable en Móviles -->
-<nav id="mobileMenu" class="fixed z-50 top-0 left-0 flex justify-center items-center w-64 h-full p-5 min-h-screen backdrop-blur-sm bg-gray-800 md:hidden">
-  <ul class="p-6 space-y-4">
-    <li><a href="#home" class="block hover:text-[#E3FF6A] transition duration-300">Inicio</a></li>
-    <li><a href="#about" class="block hover:text-[#E3FF6A] transition duration-300">Sobre mí</a></li>
-    <li><a href="#skills" class="block hover:text-[#E3FF6A] transition duration-300">Habilidades</a></li>
-    <li><a href="./src/subpaginas/proyectos.html" class="block hover:text-[#E3FF6A] transition duration-300">Proyectos</a></li>
-    <li><a href="#contact" class="block hover:text-[#E3FF6A] transition duration-300">Contacto</a></li>
-  </ul>
-</nav>
-</header>
-
-<!-- Hero -->
-<section class="relative text-center max-w-4xl mx-auto mt-10  min-h-screen" id="home">
-    <h1 class="text-4xl font-bold">Soy <span class="text-[#E3FF6A] italic">Andrea Reyes</span></h1>
-    <h2 class="text-5xl font-extrabold mt-2">
-        <span class="border border-white p-1 rounded-md">Full Stack</span> Developer
-    </h2>
-
-    <div class="relative w-full flex flex-col items-center mt-10"></div>
-        <!-- Card izquierda (Client Review) -->
-        <div class="md:absolute md:left-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:-rotate-6 bg-gray-800 text-white p-4 rounded-lg shadow-lg mb-4 md:mb-0">
-            <p class="font-semibold">Desarrolladora<br> Software</p>
-            <p> Desde 2021 haciendo codigo...<br></p>
-        </div>
-
-        <!-- Imagen -->
-        <img src="./src/assets/images/imagen_de_mi_2.png" alt="Imagen de Andrea Reyes" class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border-2  object-cover mx-auto">
-
-        <!-- Card derecha (My Expertise) -->
-        <div class="md:absolute md:right-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:rotate-6  bg-gray-800 text-white p-4 rounded-lg shadow-lg md:mt-0  flex flex-col items-center mt-10">
-            <p class="font-semibold">MI EXPERIENCIA</p>
-            <p>Backend - 80% (Python)</p><br>
-            <p>Frontend - 90% (HTML, CSS, JavaScript)</p><br>
-            <p>Mobile Development - 70% (Android Studio)</p><br>
-            <p>Data Analysis - 60% (Pandas)</p><br>
-        </div>
-
-    
-    <!-- Botón centrado -->
-    <div class="flex justify-center">
-      <a href="#projects" class="bg-[#E3FF6A] text-black px-1.5 py-1.5 border  border-gray-950 rounded-full pb-2 pe-2 pr-4 pl-4  shadow-md hover:bg-[#ffcb6a]">
-          MY PROJECTS
-      </a>
-  </div>
-</section>
-
-  
-
-
-<!-- Who Am I Section -->
-<section class="relative flex flex-col items-center text-center py-24 pt-32 px-6 md:px-12 bg-gradient-to-b from-[#0A0F1D] to-[#111827]" id="about">
-  
-  <!-- Título -->
-  <h2 class="text-[#E3FF6A] text-5xl font-extrabold mb-6 uppercase tracking-wide relative z-10">
-    SOBRE MI 
-  </h2>
-
-  <!-- Descripción -->
-  <p class="text-gray-300 text-lg max-w-xl mx-auto leading-relaxed relative z-10">
-    Soy desarrolladora full stack especializada en la creación de aplicaciones, videojuegos con Python, programas con Java y sitios web atractivos y funcionales. 
-    La programación es mi pasión, por eso trabajo en ello mientras continúo con mi carrera académica.
-    <br><br>
-  </p>
-
-  <!-- Contenedor relativo para imágenes flotantes -->
-  <div class="relative w-full max-w-4xl mt-10">
-    
-    <!-- Imagen izquierda superior -->
-    <img src="./src/assets/images/imagen de mi 3.jpg" 
-         class="absolute top-[-280px] left-[-3%] w-24 h-32 object-cover rounded-lg 
-                shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] -rotate-12 
-                hover:scale-110 transition-all duration-300 animate-float">
-    
-    <!-- Imagen izquierda inferior -->
-    <img src="./src/assets/images/imagen_de_mi_2.png" 
-         class="absolute bottom-[-130px] left-[-3%] w-36 h-48 object-cover rounded-lg 
-                shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] rotate-12
-                hover:scale-110 transition-all duration-300 animate-float delay-200">
-    
-    <!-- Imagen derecha -->           
-    <img src="./src/assets/images/imagendemi1.png" 
-         class="absolute top-[-220px] right-[-5%] w-36 h-48 object-cover rounded-lg 
-                shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] -rotate-12 
-                hover:scale-110 transition-all duration-300 animate-float delay-400">
-  </div>
-
-  <!-- Botón -->
-  <button
-  class="bg-[#E3FF6A] text-black px-6 py-3 rounded-full shadow-lg border border-gray-950 
-    transition-all duration-300 hover:bg-[#ffcb6a] hover:shadow-xl mt-20 relative z-10">
-    <a href="#projects" class="text-black">SHOW MY PROJECTS</a>
-  </button>
-</section>
-
-<!-- My Skills -->
-<h2 class="text-4xl font-bold text-center p-10">MIS HABILIDADES</h2>
-<section class=" flex items-center justify-center " id="skills"> 
-
-  <div class="flex flex-col-reverse w-full mx-4 sm:w-4/5 max-w-3xl rounded-md shadow-lg gap-2 md:flex-row p-6">
-      
-      <!-- GRID DE HABILIDADES (Se llenará dinámicamente) -->
-      <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1" role="subjects-container" id="subjects_cards">
-          <!-- Las habilidades se generarán aquí con JavaScript -->
-      </div>
-
-      <!-- TARJETA DE EXPERIENCIA -->
-      <div class="w-full md:w-1/4 shrink-0">
-          <div class="experience-card w-full h-full bg-[#111827] shadow-md text-center rounded-md py-8">
-              <h1 class="text-5xl text-white">4</h1>
-              <h2 class="text-lg text-white">Years</h2>
-              <p class="text-white text-xl">Experience<br> Working</p>
-              <a href="./src/assets/images/cv.pdf" target="_blank" download 
-                  class="mt-4 px-4 py-2 bg-[#E3FF6A] text-black rounded-full tracking-wide shadow-md hover:bg-[#ffcb6a] hover:shadow-lg transition-all w-40 mx-auto my-5 text-xs block">
-                  DESCARGAR MI CV
-              </a>
-          </div>
-      </div>
-  </div>
-</section>
-
-<!-- Adicional Skills -->
-<section class="py-5 flex flex-col items-center text-center bg-gradient-to-b from-[#0A0F1D] to-[#111827] rounded-lg w-full px-6 sm:px-10 md:px-20">
-  <h2 class="text-2xl text-[#E3FF6A] pb-5">
-   ADDITIONAL SKILLS
-  </h2>
-
-  <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 justify-center items-center w-full max-w-4xl">
-    <img src="./src/assets/images/Bootstrap.png" alt="Bootstrap" class="h-10 mx-auto" />
-    <img src="./src/assets/images/Axios.png" alt="Axios" class="h-10 mx-auto" />
-    <img src="./src/assets/images/redux.png" alt="Redux" class="h-10 mx-auto" />
-    <img src="./src/assets/images/materialui.png" alt="Material UI" class="h-10 mx-auto" />
-    <img src="./src/assets/images/firebase.png" alt="Firebase" class="h-10 mx-auto" />
-    <img src="./src/assets/images/WordPress.png" alt="WordPress" class="h-10 mx-auto" />
-    <img src="./src/assets/images/Framer-Motion.png" alt="Framer Motion" class="h-10 mx-auto" />
-  </div>
-</section>
-
-<!--Proyectos Destacados-->
-
-<section class="py-16 px-8 relative p-10" id="projects">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-    <!-- Texto y Botón -->
-    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-      <h2 class="text-4xl md:text-5xl font-bold leading-tight p-10">
-        THE WORKS <br> CLOSEST TO <br> MY HEART
-      </h2>
-      <button class="mt-6 px-6 py-3 bg-[#E3FF6A] text-black font-semibold rounded-full shadow-lg hover:bg-[#d4e65d] transition">
-        SHOW MY PROJECTS
-      </button>
-    </div>
-
-    <!-- Carrusel de Proyectos -->
-    <div class="md:w-1/2 relative overflow-hidden">
-      <div id="project-gallery" class="flex space-x-4 overflow-x-auto scrollbar-hide snap-x scroll-smooth">
-        <!-- Tarjeta 1 -->
-        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[220px] h-[380px] shrink-0">
-          <img src="./src/assets/images/JavaBlack.jpg" alt="Plumbing Company" class="w-full h-full object-cover">
-          <p class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 px-3 py-1 text-sm rounded font-semibold">
-            Plumbing Company
-          </p>
-        </div>
-        <!-- Tarjeta 2 -->
-        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[180px] h-[350px] shrink-0">
-          <img src="./src/assets/images/lenguajes-de-programacion.jpg" alt="Proyecto Python" class="w-full h-full object-cover">
-        </div>
-        <!-- Tarjeta 3 -->
-        <div class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[160px] h-[320px] shrink-0">
-          <img src="./src/assets/images/consulting-blog-09.webp" alt="Proyecto Web" class="w-full h-full object-cover">
-        </div>
-      </div>
-
-      <!-- Flechas de Navegación -->
-      <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition">
-        &#9665;
-      </button>
-      <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition">
-        &#9655;
-      </button>
-    </div>
-  </div>
-</section>
-
-<!--Formulario de Contacto-->
-<section id="contact" class="flex justify-center items-center min-h-screen">
-  <div class="bg-white p-10 rounded-2xl shadow-2xl max-w-lg w-full">
-      <h2 class="text-2xl md:text-3xl text-center mb-6 text-[#1E293B]">HABLEMOS</h2>
-      <form class="space-y-4">
-            <input type="text" placeholder="TU NOMBRE"
-              class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none">
-            <input type="email" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO"
-              class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none">
-            <textarea placeholder="TU MENSAJE AQUÍ"
-              class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none h-32 resize-none"></textarea>
-          <button type="submit"
-              class="w-full py-4 bg-[#E3FF6A] text-[#1E293B] rounded-full hover:bg-[#ffcb6a] transition">
-                ENVIAR AQUÍ
-          </button>
-      </form>
-  </div>
-</section>
-
-<!--falta envio de formulario de correo -->
-<footer>
-  <footer class="bg-[#0A0F1D] text-white py-8 px-4 md:px-12">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+    <title>Portafolio de Andrea Reyes</title>
+    <link
+      rel="icon"
+      href="./src/assets/images/icon-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/styles/output.css" />
+    <script src="./src/scripts/index.js" defer></script>
+    <script src="./src/scripts/habilidades.js" defer></script>
+    <script src="./src/scripts/toggle-menu.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body class="text-white font-[satoshi] bg-[#000414] w-full">
+    <!-- Header -->
+    <header
+      class="relative flex justify-evenly space-x-4 items-center p-4 bg-gray-900"
+    >
       <!-- Logo -->
-      <img src="./src/assets/images/logo.png" alt="Logo" class="w-40 h-15 mb-4 md:mb-0 pe-2.5">
+      <img
+        src="./src/assets/images/logo.png"
+        alt="Logo"
+        class="w-40 h-16 md:w-30 md:h-24 object-contain"
+      />
 
-      <!-- Redes Sociales -->
-      <div class="flex space-x-4">
-      <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
-        <img src="./src/assets/images/github.png" alt="Github" class="w-6 h-6">
+      <!-- Menú de Navegación en Escritorio -->
+      <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
+        <a href="#home" class="hover:text-[#E3FF6A] transition duration-300"
+          >Inicio</a
+        >
+        <a href="#about" class="hover:text-[#E3FF6A] transition duration-300"
+          >Sobre mí</a
+        >
+        <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300"
+          >Habilidades</a
+        >
+        <a
+          href="./src/subpaginas/proyectos.html"
+          class="hover:text-[#E3FF6A] transition duration-300"
+          >Proyectos</a
+        >
+        <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300"
+          >Contacto</a
+        >
+      </nav>
+
+      <!-- Botón Contacto -->
+      <a
+        href="#contact"
+        class="flex items-center gap-2 px-0.5 py-0.5 border pb-0.5 pe-0.5 pr-0.5 pl-3.5 border-gray-500 rounded-full text-white hover:text-[#E3FF6A] transition"
+      >
+        <span class="uppercase text-sm font-medium">Contact</span>
+        <div
+          class="w-7 h-7 flex items-center justify-center bg-[#E3FF6A] text-gray-900 rounded-full transition"
+        >
+          🡥
+        </div>
       </a>
-      <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
-        <img src="./src/assets/images/twitter.png" alt="Twitter" class="w-6 h-6">
-      </a>
-      <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
-        <img src="./src/assets/images/facebook.png" alt="Facebook" class="w-6 h-6">
-      </a>
+
+      <!-- Botón Toggle para Móviles -->
+      <button class="text-white md:hidden" id="button_toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+      <!-- Menú Desplegable en Móviles -->
+      <nav
+        id="mobileMenu"
+        class="md: grid-cols-3 z-index z-20 top-0 left-0 p-10 md:hidden"
+      >
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="#home"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="./src/subpaginas/proyectos.html"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="relative text-center max-w-4xl mx-auto mt-10 min-h-screen"
+      id="home"
+    >
+      <h1 class="text-4xl font-bold">
+        Soy <span class="text-[#E3FF6A] italic">Andrea Reyes</span>
+      </h1>
+      <h2 class="text-5xl font-extrabold mt-2">
+        <span class="border border-white p-1 rounded-md">Full Stack</span>
+        Developer
+      </h2>
+
+      <div class="relative w-full flex flex-col items-center mt-10"></div>
+      <!-- Card izquierda (Client Review) -->
+      <div
+        class="md:absolute md:left-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:-rotate-6 bg-gray-800 text-white p-4 rounded-lg shadow-lg mb-4 md:mb-0"
+      >
+        <p class="font-semibold">
+          Desarrolladora<br />
+          Software
+        </p>
+        <p>Desde 2021 haciendo codigo...<br /></p>
       </div>
-    </div>
 
-    <!-- Derechos de autor -->
-    <div class="text-center mt-8 text-gray-400">
-      &copy; 2023 Andrea Reyes. Todos los derechos reservados.
-    </div>
-  </footer>
-</footer>
-</body>
+      <!-- Imagen -->
+      <img
+        src="./src/assets/images/imagen_de_mi_2.png"
+        alt="Imagen de Andrea Reyes"
+        class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border-2 object-cover mx-auto"
+      />
+
+      <!-- Card derecha (My Expertise) -->
+      <div
+        class="md:absolute md:right-[-100px] md:top-1/2 md:transform md:-translate-y-1/2 md:rotate-6 bg-gray-800 text-white p-4 rounded-lg shadow-lg md:mt-0 flex flex-col items-center mt-10"
+      >
+        <p class="font-semibold">MI EXPERIENCIA</p>
+        <p>Backend - 80% (Python)</p>
+        <br />
+        <p>Frontend - 90% (HTML, CSS, JavaScript)</p>
+        <br />
+        <p>Mobile Development - 70% (Android Studio)</p>
+        <br />
+        <p>Data Analysis - 60% (Pandas)</p>
+        <br />
+      </div>
+
+      <!-- Botón centrado -->
+      <div class="flex justify-center">
+        <a
+          href="#projects"
+          class="bg-[#E3FF6A] text-black px-1.5 py-1.5 border border-gray-950 rounded-full pb-2 pe-2 pr-4 pl-4 shadow-md hover:bg-[#ffcb6a]"
+        >
+          MY PROJECTS
+        </a>
+      </div>
+    </section>
+
+    <!-- Who Am I Section -->
+    <section
+      class="relative flex flex-col items-center text-center py-24 pt-32 px-6 md:px-12 bg-gradient-to-b from-[#0A0F1D] to-[#111827]"
+      id="about"
+    >
+      <!-- Título -->
+      <h2
+        class="text-[#E3FF6A] text-5xl font-extrabold mb-6 uppercase tracking-wide relative z-10"
+      >
+        SOBRE MI
+      </h2>
+
+      <!-- Descripción -->
+      <p
+        class="text-gray-300 text-lg max-w-xl mx-auto leading-relaxed relative z-10"
+      >
+        Soy desarrolladora full stack especializada en la creación de
+        aplicaciones, videojuegos con Python, programas con Java y sitios web
+        atractivos y funcionales. La programación es mi pasión, por eso trabajo
+        en ello mientras continúo con mi carrera académica.
+        <br /><br />
+      </p>
+
+      <!-- Contenedor relativo para imágenes flotantes -->
+      <div class="relative w-full max-w-4xl mt-10">
+        <!-- Imagen izquierda superior -->
+        <img
+          src="./src/assets/images/imagen de mi 3.jpg"
+          class="absolute top-[-280px] left-[-3%] w-24 h-32 object-cover rounded-lg shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] -rotate-12 hover:scale-110 transition-all duration-300 animate-float"
+        />
+
+        <!-- Imagen izquierda inferior -->
+        <img
+          src="./src/assets/images/imagen_de_mi_2.png"
+          class="absolute bottom-[-130px] left-[-3%] w-36 h-48 object-cover rounded-lg shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] rotate-12 hover:scale-110 transition-all duration-300 animate-float delay-200"
+        />
+
+        <!-- Imagen derecha -->
+        <img
+          src="./src/assets/images/imagendemi1.png"
+          class="absolute top-[-220px] right-[-5%] w-36 h-48 object-cover rounded-lg shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] -rotate-12 hover:scale-110 transition-all duration-300 animate-float delay-400"
+        />
+      </div>
+
+      <!-- Botón -->
+      <button
+        class="bg-[#E3FF6A] text-black px-6 py-3 rounded-full shadow-lg border border-gray-950 transition-all duration-300 hover:bg-[#ffcb6a] hover:shadow-xl mt-20 relative z-10"
+      >
+        <a href="#projects" class="text-black">SHOW MY PROJECTS</a>
+      </button>
+    </section>
+
+    <!-- My Skills -->
+    <h2 class="text-4xl font-bold text-center p-10">MIS HABILIDADES</h2>
+    <section class="flex items-center justify-center" id="skills">
+      <div
+        class="flex flex-col-reverse w-full mx-4 sm:w-4/5 max-w-3xl rounded-md shadow-lg gap-2 md:flex-row p-6"
+      >
+        <!-- GRID DE HABILIDADES (Se llenará dinámicamente) -->
+        <div
+          class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1"
+          role="subjects-container"
+          id="subjects_cards"
+        >
+          <!-- Las habilidades se generarán aquí con JavaScript -->
+        </div>
+
+        <!-- TARJETA DE EXPERIENCIA -->
+        <div class="w-full md:w-1/4 shrink-0">
+          <div
+            class="experience-card w-full h-full bg-[#111827] shadow-md text-center rounded-md py-8"
+          >
+            <h1 class="text-5xl text-white">4</h1>
+            <h2 class="text-lg text-white">Years</h2>
+            <p class="text-white text-xl">
+              Experience<br />
+              Working
+            </p>
+            <a
+              href="./src/assets/images/cv.pdf"
+              target="_blank"
+              download
+              class="mt-4 px-4 py-2 bg-[#E3FF6A] text-black rounded-full tracking-wide shadow-md hover:bg-[#ffcb6a] hover:shadow-lg transition-all w-40 mx-auto my-5 text-xs block"
+            >
+              DESCARGAR MI CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adicional Skills -->
+    <section
+      class="py-5 flex flex-col items-center text-center bg-gradient-to-b from-[#0A0F1D] to-[#111827] rounded-lg w-full px-6 sm:px-10 md:px-20"
+    >
+      <h2 class="text-2xl text-[#E3FF6A] pb-5">ADDITIONAL SKILLS</h2>
+
+      <div
+        class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 justify-center items-center w-full max-w-4xl"
+      >
+        <img
+          src="./src/assets/images/Bootstrap.png"
+          alt="Bootstrap"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/Axios.png"
+          alt="Axios"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/redux.png"
+          alt="Redux"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/materialui.png"
+          alt="Material UI"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/firebase.png"
+          alt="Firebase"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/WordPress.png"
+          alt="WordPress"
+          class="h-10 mx-auto"
+        />
+        <img
+          src="./src/assets/images/Framer-Motion.png"
+          alt="Framer Motion"
+          class="h-10 mx-auto"
+        />
+      </div>
+    </section>
+
+    <!--Proyectos Destacados-->
+
+    <section class="py-16 px-8 relative p-10" id="projects">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between"
+      >
+        <!-- Texto y Botón -->
+        <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight p-10">
+            THE WORKS <br />
+            CLOSEST TO <br />
+            MY HEART
+          </h2>
+          <button
+            class="mt-6 px-6 py-3 bg-[#E3FF6A] text-black font-semibold rounded-full shadow-lg hover:bg-[#d4e65d] transition"
+          >
+            SHOW MY PROJECTS
+          </button>
+        </div>
+
+        <!-- Carrusel de Proyectos -->
+        <div class="md:w-1/2 relative overflow-hidden">
+          <div
+            id="project-gallery"
+            class="flex space-x-4 overflow-x-auto scrollbar-hide snap-x scroll-smooth"
+          >
+            <!-- Tarjeta 1 -->
+            <div
+              class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[220px] h-[380px] shrink-0"
+            >
+              <img
+                src="./src/assets/images/JavaBlack.jpg"
+                alt="Plumbing Company"
+                class="w-full h-full object-cover"
+              />
+              <p
+                class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 px-3 py-1 text-sm rounded font-semibold"
+              >
+                Plumbing Company
+              </p>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div
+              class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[180px] h-[350px] shrink-0"
+            >
+              <img
+                src="./src/assets/images/lenguajes-de-programacion.jpg"
+                alt="Proyecto Python"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Tarjeta 3 -->
+            <div
+              class="relative rounded-[30px] overflow-hidden shadow-lg snap-center w-[160px] h-[320px] shrink-0"
+            >
+              <img
+                src="./src/assets/images/consulting-blog-09.webp"
+                alt="Proyecto Web"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Flechas de Navegación -->
+          <button
+            id="prev-btn"
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition"
+          >
+            &#9665;
+          </button>
+          <button
+            id="next-btn"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition"
+          >
+            &#9655;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--Formulario de Contacto-->
+    <section id="contact" class="flex justify-center items-center min-h-screen">
+      <div class="bg-white p-10 rounded-2xl shadow-2xl max-w-lg w-full">
+        <h2 class="text-2xl md:text-3xl text-center mb-6 text-[#1E293B]">
+          HABLEMOS
+        </h2>
+        <form class="space-y-4">
+          <input
+            type="text"
+            placeholder="TU NOMBRE"
+            class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none"
+          />
+          <input
+            type="email"
+            placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO"
+            class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none"
+          />
+          <textarea
+            placeholder="TU MENSAJE AQUÍ"
+            class="w-full p-4 bg-gray-200 rounded-lg placeholder-gray-600 text-gray-900 outline-none h-32 resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full py-4 bg-[#E3FF6A] text-[#1E293B] rounded-full hover:bg-[#ffcb6a] transition"
+          >
+            ENVIAR AQUÍ
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!--falta envio de formulario de correo -->
+    <footer>
+      <footer class="bg-[#0A0F1D] text-white py-8 px-4 md:px-12">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center"
+        >
+          <!-- Logo -->
+          <img
+            src="./src/assets/images/logo.png"
+            alt="Logo"
+            class="w-40 h-15 mb-4 md:mb-0 pe-2.5"
+          />
+
+          <!-- Redes Sociales -->
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
+              <img
+                src="./src/assets/images/github.png"
+                alt="Github"
+                class="w-6 h-6"
+              />
+            </a>
+            <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
+              <img
+                src="./src/assets/images/twitter.png"
+                alt="Twitter"
+                class="w-6 h-6"
+              />
+            </a>
+            <a href="#" class="hover:text-[#E3FF6A] transition duration-300">
+              <img
+                src="./src/assets/images/facebook.png"
+                alt="Facebook"
+                class="w-6 h-6"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Derechos de autor -->
+        <div class="text-center mt-8 text-gray-400">
+          &copy; 2023 Andrea Reyes. Todos los derechos reservados.
+        </div>
+      </footer>
+    </footer>
+  </body>
 </html>
-
-

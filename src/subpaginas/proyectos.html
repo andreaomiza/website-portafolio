@@ -1,88 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Proyectos Web Dinamicos e intuitivos">
-  <meta name="keywords" content="desarrollador web, diseñador, desarrollador front-end">
-  <meta name="author" content="Andrea Reyes">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proyectos Web Dinamicos e intuitivos" />
+    <meta
+      name="keywords"
+      content="desarrollador web, diseñador, desarrollador front-end"
+    />
+    <meta name="author" content="Andrea Reyes" />
 
-  <title>Portafolio de Andrea Reyes</title>
-  <link rel="icon" href="/src/assets/images/icon-removebg-preview.png" type="image/x-icon">
-  <link rel="stylesheet" href="/src/styles/output.css">
-  <script defer src="/src/scripts/proyectos.js"></script>
-  <script src="/src/scripts/toggle-menu.js" defer></script>
-</head>
-<body class="text-white font-[satoshi] bg-[#000414] w-full">
-  <!-- Header -->
-<header class="relative flex justify-evenly space-x-4 items-center p-4 bg-gray-900">
-  <!-- Logo -->
-  <img src="/src/assets/images/logo.png" alt="Logo" class="w-40 h-16 md:w-30 md:h-24 object-contain">
+    <title>Portafolio de Andrea Reyes</title>
+    <link
+      rel="icon"
+      href="/src/assets/images/icon-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/styles/output.css" />
+    <script defer src="/src/scripts/proyectos.js"></script>
+    <script src="/src/scripts/toggle-menu.js" defer></script>
+  </head>
+  <body class="text-white font-[satoshi] bg-[#000414] w-full">
+    <!-- Header -->
+    <header
+      class="relative flex justify-evenly space-x-4 items-center p-4 bg-gray-900"
+    >
+      <!-- Logo -->
+      <img
+        src="/src/assets/images/logo.png"
+        alt="Logo"
+        class="w-40 h-16 md:w-30 md:h-24 object-contain"
+      />
 
-  <!-- Menú de Navegación en Escritorio -->
-  <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
-    
-      <a href="/index.html" class="hover:text-[#E3FF6A] transition duration-300">Inicio</a>
-      <a href="#about" class="hover:text-[#E3FF6A] transition duration-300">Sobre mí</a>
-      <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300">Habilidades</a>
-      <a href="/src/subpaginas/proyectos.html" class="hover:text-[#E3FF6A] transition duration-300">Proyectos</a>
-      <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300">Contacto</a>
-    
-  </nav>
+      <!-- Menú de Navegación en Escritorio -->
+      <nav class="hidden md:flex space-x-6 text-white text-lg tracking-wide">
+        <a
+          href="/index.html"
+          class="hover:text-[#E3FF6A] transition duration-300"
+          >Inicio</a
+        >
+        <a href="#about" class="hover:text-[#E3FF6A] transition duration-300"
+          >Sobre mí</a
+        >
+        <a href="#skills" class="hover:text-[#E3FF6A] transition duration-300"
+          >Habilidades</a
+        >
+        <a
+          href="/src/subpaginas/proyectos.html"
+          class="hover:text-[#E3FF6A] transition duration-300"
+          >Proyectos</a
+        >
+        <a href="#contact" class="hover:text-[#E3FF6A] transition duration-300"
+          >Contacto</a
+        >
+      </nav>
 
-  <!-- Botón Toggle para Móviles -->
-  <button class="text-white md:hidden" id="button_toggle">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-  </button>
-
-    <!-- Botón Contacto -->
-    <a href="#contact" class="flex items-center gap-2 px-0.5 py-0.5 border pb-0.5 pe-0.5 pr-0.5 pl-3.5 border-gray-500 rounded-full text-white hover:text-[#E3FF6A] transition">
-      <span class="uppercase text-sm font-medium">Contact</span>
-      <div class="w-7 h-7 flex items-center justify-center bg-[#E3FF6A] text-gray-900 rounded-full transition">
-        🡥
-      </div>
+      <!-- Botón Contacto -->
+      <a
+        href="#contact"
+        class="flex items-center gap-2 px-0.5 py-0.5 border pb-0.5 pe-0.5 pr-0.5 pl-3.5 border-gray-500 rounded-full text-white hover:text-[#E3FF6A] transition"
+      >
+        <span class="uppercase text-sm font-medium">Contact</span>
+        <div
+          class="w-7 h-7 flex items-center justify-center bg-[#E3FF6A] text-gray-900 rounded-full transition"
+        >
+          🡥
+        </div>
       </a>
+
+      <!-- Botón Toggle para Móviles -->
+      <button class="text-white md:hidden" id="button_toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
       <!-- Menú Desplegable en Móviles -->
-<nav id="mobileMenu" class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
-  <ul class="p-6 space-y-4">
-    <li><a href="/index.html" class="block hover:text-[#E3FF6A] transition duration-300">Inicio</a></li>
-    <li><a href="#about" class="block hover:text-[#E3FF6A] transition duration-300">Sobre mí</a></li>
-    <li><a href="#skills" class="block hover:text-[#E3FF6A] transition duration-300">Habilidades</a></li>
-    <li><a href="/src/subpaginas/proyectos.html" class="block hover:text-[#E3FF6A] transition duration-300">Proyectos</a></li>
-    <li><a href="#contact" class="block hover:text-[#E3FF6A] transition duration-300">Contacto</a></li>
-  </ul>
-</nav>
-</header>
+      <nav
+        id="mobileMenu"
+        class="md: grid-cols-3 z-index z-20 top-0 left-0 p-10 md:hidden"
+      >
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="#home"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="./src/subpaginas/proyectos.html"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block hover:text-[#E3FF6A] transition duration-300"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<!-- Hero -->
-<section class="relative text-center max-w-4xl mx-auto mt-10  min-h-screen" id="home">
-  <h1 class="text-4xl font-bold">Soy <span class="text-[#E3FF6A] italic">Andrea Reyes</span></h1>
-  <h2 class="text-5xl font-extrabold mt-2">
-      <span class="border border-white p-1 rounded-md">Full Stack</span> Developer
-  </h2>
+    <!-- Hero -->
+    <section
+      class="relative text-center max-w-4xl mx-auto mt-10 min-h-screen"
+      id="home"
+    >
+      <h1 class="text-4xl font-bold">
+        Soy <span class="text-[#E3FF6A] italic">Andrea Reyes</span>
+      </h1>
+      <h2 class="text-5xl font-extrabold mt-2">
+        <span class="border border-white p-1 rounded-md">Full Stack</span>
+        Developer
+      </h2>
 
-  <div class="relative w-full flex flex-col items-center mt-10">
+      <div class="relative w-full flex flex-col items-center mt-10">
+        <!-- Imagen -->
+        <img
+          src="/src/assets/images/imagen_de_mi_2.png"
+          alt="Imagen de Andrea Reyes"
+          class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border-2 object-cover mx-auto"
+        />
+      </div>
+    </section>
 
-      <!-- Imagen -->
-      <img src="/src/assets/images/imagen_de_mi_2.png" alt="Imagen de Andrea Reyes" class="drop-shadow-[4px_4px_120px_rgb(194,194,41)] w-100 h-90 border-2  object-cover mx-auto">
-
-  </div>
-</section>
-
-<section class="text-center mt-10">
-  <h1 class="block text-4xl p-5 transition duration-300 text-[#E3FF6A]">
-    <a href="#proyectos">MIS PROYECTOS</a>
-  </h1>
-</section>
- <main class="p-4">
-        <section id="proyectos" class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-3 gap-4"></section>
+    <section class="text-center mt-10">
+      <h1 class="block text-4xl p-5 transition duration-300 text-[#E3FF6A]">
+        <a href="#proyectos">MIS PROYECTOS</a>
+      </h1>
+    </section>
+    <main class="p-4">
+      <section
+        id="proyectos"
+        class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-3 gap-4"
+      ></section>
     </main>
-
-</body>
+  </body>
 </html>
-
-
-
-
